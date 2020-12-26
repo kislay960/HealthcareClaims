@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Claims Fraud Detection</title>
+    <!--Bootstrap file-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <!--Developer Css File-->
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        h1 {
+            border-bottom: 2px ridge red;
+        }
+
+        #heading,
+        #description,
+        #introduction {
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        #heading {
+            background-color: #F6D55C;
+        }
+
+        #description {
+            background-color: #df9892;
+        }
+
+        #introduction {
+            background-color: #83e4ad;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">HEALTHCARE CLAIMS FRAUD DETECTION</h1>
+        <div class="row my-4">
+            <div class="col" id="heading">
+                <h2 class="my-2">ABSTRACT: </h2>
+                <p>Medical Insurance Fraud is very common these days. In this type of fraud‚ false or misleading
+                    information
+                    is
+                    provided to a health insurance company in an attempt to have them pay unauthorized benefits to the
+                    policy
+                    holder‚ another party‚ or the entity providing services. The offense can be committed by the insured
+                    individual
+                    or the provider of health services. Our objective is to interpret, implement and demonstrate designs
+                    and
+                    systems that leverages technologies like AI
+                    and ML to make an efficient healthcare system and maintain maximum accuracy on data of systems. We
+                    will
+                    use a combination of web technologies for better user interface and several Machine Learning
+                    algorithms
+                    to develop a
+                    system which can detect anomalies, help recover overpayment by user, can flag claims for potential
+                    Appeals and Grievances and help with provider payment preferences.
+                </p>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col" id="description">
+                <h2 class="my-2">DESCRIPTION: </h2>
+                <p>
+                    This project will reduce the organizational gaps between patients and healthcare system and the
+                    project
+                    will
+                    also be user friendly so that anyone can use it easily.
+                    In this application we will provide four main problem outlines as options to the user which are
+                    described as
+                    :-
+                    <li>Intake and pre-processing anomaly detection.(Predict anomaly)<ul>Detect anomalies and
+                            discrepancies
+                            in
+                            the
+                            healthcare claims intake / acquisition and preprocessing / data loading steps. Example-
+                            Alerts/
+                            notifications can be sent out in case of table loading errors or where re-submissions are
+                            required.
+                        </ul>
+                    </li>
+                    <li>Overpayment Recovery and adjustment analysis.(Overpayment Detection),<ul>Built an adjustments or
+                            corrections
+                            system to be used whenever Overpayment occurs from the side of the payer in the previous
+                            claim
+                            payment
+                            cycle for a physician/hospital.</ul>
+                    </li>
+                    <li>Decision Flagging for potential appeals and grievances inflow.(Predict Fraud)<ul>Based on claim
+                            decisions
+                            made, we have built an AI/ML-driven analytics model that flags claims for the potential
+                            Appeals
+                            &
+                            Grievances (A&G) inflow and processing.</ul>
+                    </li>
+                    <li>Categorization based on provider payment preferences.(Predict mode of payment)<ul>Based on
+                            provider
+                            payment
+                            preferences, we have built an AI/ML-driven analytics model that groups claims the Checks and
+                            Electronic
+                            Fund Transfer (EFT). Based on provider preferences, analytics and decision , support could
+                            further
+                            be
+                            applied on rolling out tailored suggestions and services to providers – to improve provider
+                            engagement,
+                            experience, and retention.</ul>
+                    </li>
+                    We have made a web application which will demonstrate the idea and take input from the user about
+                    the
+                    beneficiary which will include gender, state, Bill amount, reimbursement amount, Impatient claim
+                    number,
+                    outpatient claim number, inpatient claim amount, outpatient Claim amount. By clicking on button
+                    provided
+                    you
+                    will get your result.
+                    <br>
+                    Technology Stack : Framework used – Google colab, HTML, CSS, Bootstrap, Github.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="introduction">
+                <h2 class="my-2">INTRODUCTION TO DATA FIELDS:</h2>
+                <p>
+                    For the purpose of this project, we are considering Inpatient claims, Outpatient claims and
+                    Beneficiary
+                    details
+                    of each provider. Lets s see their details :
+                    <li>Inpatient Data
+                        <ul>This data provides insights about the claims filed for those patients who are admitted in
+                            the
+                            hospitals.
+                            It also provides additional details like their admission and discharge dates and admit d
+                            diagnosis
+                            code.
+                        </ul>
+                        <ul>Inpatient Claim Number – The number of times inpatient claims have been filed.</ul>
+                        <ul>Inpatient Claim Amount - Total Claim Amount of all the inpatient claims</ul>
+                    </li>
+                    <li>Outpatient Data
+                        <ul> data provides details about the claims filed for those patients who visit hospitals and not
+                            admitted in
+                            it.</ul>
+                        <ul> Claim Number – The number of times outpatient claims have been filed.</ul>
+                        <ul> Claim Amount - Total Claim Amount of all the outpatient claims.</ul>
+                    </li>
+                    <li> Beneficiary Details Data
+                        <ul> data contains beneficiary KYC details like health conditions, region they belong to etc.
+                        </ul>
+                    </li>
+                </p>
+            </div>
+        </div>
+        <h1 class="text-center my-5">TEST MODEL ON YOUR INPUT:</h1>
+        <form method="POST" action="/">
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label for="bill">Total Bill Amount:
+                        <input type="text" class="form-control" id="bill" name="Total Bill Amount">
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label for="Reimbursement">Total Reimbursement Amount:
+                        <input type="text" class="form-control" width=50% name="Total Reimbursement Amount"
+                            id="Reimbursement">
+                    </label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label for="Inpatient">Inpatient Claim Number:
+                        <input type="text" class="form-control" name="Inpatient Claim Number" id="Inpatient">
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label for="Ouspatient">Outpatient Claim Number:
+                        <input type="text" class="form-control" name="Outpatient Claim Number" id="Outpatient">
+                    </label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label for="inpatientAmount">Inpatient Claim Amount:
+                        <input type="text" class="form-control" name="Inpatient Claim Amount" id="inpatientAmount">
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label for="outpatientClaim">Outpatient Claim Amount:
+                        <input type="text" class="form-control" name="Outpatient Claim Amount" id="outpatientClaim">
+                    </label>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-success mt-4" value="Submit">
+        </form>
+        <br>
+        {% if flag %}
+        <h5>Please enter correct numerical values</h5>
+        {% else %}
+        {% if diff %}
+        <h5> Bill and Reimbursement Difference amount : {{ diff }}</h5>
+        {% elif fraud %}
+        <h5>No one overpaid. Difference amount :{{ diff }}</h5>
+        {% endif %}
+        {% if fraud and paymentmode%}
+        <h5> Fraud detection based on claim numbers and amounts <i> (Y/N for Yes/No) : {{ fraud }}</i></h5>
+        <h5> Payment Method selected by users for safe payment based on claim numbers and amounts <i>(C/E for
+                cheque/EFT):
+                {{ paymentmode }}</i></h5>
+        {% endif %}
+        {% endif %}
+        <br><br><br><br><br><br>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
